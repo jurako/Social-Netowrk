@@ -1,17 +1,13 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title></title>
-    </head>
-    <body>
-        <?php
-            echo 'social network';
-        ?>
-    </body>
-</html>
+<?php
+    ini_set('display_errors', 1);
+    error_reporting(E_ALL);
+    
+    define('ROOT', dirname(__FILE__));
+    session_start();
+    require_once ('/components/Router.php');
+    require_once ('/components/Db.php');
+  
+    // Вызов Router
+    $router = new Router();
+    $router->run();
+?>
